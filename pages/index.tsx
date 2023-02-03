@@ -14,25 +14,27 @@ const Home: NextPage = () => {
     const firstRender = useRef(false);
 
     useEffect(() => {
-        if (firstRender.current) {
-            gsap.registerPlugin(ScrollTrigger);
-            textAnimation("#block0");
-            textAnimation("#block1");
-            fixedScroll("#block1-fix-scroll");
-            textAnimation("#block2");
-            fixedScroll("#block2-fix-scroll");
-            textAnimation("#block3");
-            fixedScroll("#block3-fix-scroll");
-            textAnimation("#block4");
-            horizontalScroll("#horizontal1");
-            textAnimation("#block5");
-            horizontalScroll("#horizontal2");
-            textAnimation("#block6");
-        }
+        // if (firstRender.current) {
+        gsap.registerPlugin(ScrollTrigger);
+        console.log(ScrollTrigger);
 
-        return () => {
-            firstRender.current = true;
-        };
+        textAnimation("#block0");
+        textAnimation("#block1");
+        fixedScroll("#block1-fix-scroll");
+        textAnimation("#block2");
+        fixedScroll("#block2-fix-scroll");
+        textAnimation("#block3");
+        fixedScroll("#block3-fix-scroll");
+        textAnimation("#block4");
+        horizontalScroll("#horizontal1");
+        textAnimation("#block5");
+        horizontalScroll("#horizontal2");
+        textAnimation("#block6");
+        // }
+
+        // return () => {
+        //     firstRender.current = true;
+        // };
     }, []);
 
     return (
