@@ -45,7 +45,7 @@ const Home: NextPage = () => {
                 </title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main>
+            <main className="overflow-hidden">
                 <div id="block0">
                     <div className="h-screen w-screen bg-main bg-cover">
                         <h1 className="scale text-6xl lead-[4.5rem] text-[70px] max-w-[100vw] w-[915px] m-auto text-white font-bold pt-[80px] uppercase">
