@@ -42,10 +42,6 @@ const Home: NextPage = () => {
                     50 năm chiến thắng Điện Biên Phủ trên không 1972
                 </title>
                 <link rel="icon" href="/favicon.ico" />
-                <script
-                    src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"
-                    integrity="sha512-m/n857VfrPYUcRvzCfqfrC9aMT06TQA2V0DcX/Ovovrhswa3038FfYmHlB0l/ZMukVyKWmiwZI4Pnnd7v3FwFQ=="
-                ></script>
             </Head>
             <main>
                 <div id="block0">
