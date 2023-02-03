@@ -1081,7 +1081,7 @@ const Home: NextPage = () => {
                             </div>
                         </section>
 
-                        <section className="mt-20 mb-[15px] w-[945px] max-w-[100vw] mx-auto scale">
+                        <section className="mt-20 mb-[15px] w-[945px] max-w-full mx-auto scale">
                             <div className="w-full border-[1px] border-second rounded-lg relative pt-[45px]">
                                 <img
                                     className="h-[91px] w-auto max-w-full m-auto absolute -top-[55px] left-40"
