@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: Arial, sans-serif;
+        @apply text-lg;
+        @apply overflow-x-hidden;
+        @apply text-center;
+    }
+
+    .last-box {
+        grid-template-areas:
+            "image"
+            "content";
+    }
+
+    .last-box .content {
+        grid-area: content;
+    }
+
+    .last-box .image {
+        grid-area: image;
+    }
+}
