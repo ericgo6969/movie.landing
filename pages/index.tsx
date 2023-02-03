@@ -1172,7 +1172,7 @@ const Home: NextPage = () => {
                             </p>
                         </section>
 
-                        <section className="mt-5 w-[945px] max-w-[100vw] lg:px-0 text-left translate m-auto">
+                        <section className="mt-5 w-[945px] max-w-full lg:px-0 text-left translate m-auto">
                             <div className="lg:flex items-center py-5 border-t-[1px] border-second w-full">
                                 <img
                                     src="/images/section13/avt1.png"
