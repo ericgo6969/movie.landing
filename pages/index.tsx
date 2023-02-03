@@ -16,8 +16,6 @@ const Home: NextPage = () => {
     useEffect(() => {
         // if (firstRender.current) {
         gsap.registerPlugin(ScrollTrigger);
-        console.log(ScrollTrigger);
-
         textAnimation("#block0");
         textAnimation("#block1");
         fixedScroll("#block1-fix-scroll");
