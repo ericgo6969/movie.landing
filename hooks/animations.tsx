@@ -85,22 +85,35 @@ const horizontalScroll = (dom: string) => {
     const box = document.querySelector(dom) as HTMLElement;
 
     const wrap = box.querySelector(".wrap") as HTMLElement;
-    const wrapWidth = wrap.offsetWidth;
+    const images = wrap.querySelectorAll("img");
 
-    gsap.to(wrap, {
-        duration: 2,
-        xPercent: -100,
-        x: () => innerWidth,
-        ease: "none",
-        scrollTrigger: {
-            start: "top top",
-            trigger: wrap,
-            pin: true,
-            scrub: 1,
-            end: () => "+=" + wrapWidth,
-            invalidateOnRefresh: true,
-            anticipatePin: 1,
-        },
+    Promise.all(
+        Array.from(images)
+            .filter((img) => !img.complete)
+            .map(
+                (img) =>
+                    new Promise((resolve) => {
+                        img.onload = img.onerror = resolve;
+                    })
+            )
+    ).then(() => {
+        const wrapWidth = wrap.offsetWidth;
+
+        gsap.to(wrap, {
+            duration: 2,
+            xPercent: -100,
+            x: () => innerWidth,
+            ease: "none",
+            scrollTrigger: {
+                start: "top top",
+                trigger: wrap,
+                pin: true,
+                scrub: 1,
+                end: () => "+=" + wrapWidth,
+                invalidateOnRefresh: true,
+                anticipatePin: 1,
+            },
+        });
     });
 };
 
